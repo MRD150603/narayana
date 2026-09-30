@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specialities | Narayana Netralaya nVision Eye Hospitals &amp; Research Center</title>
+<meta name="description" content="Explore every eye care speciality at Narayana Netralaya nVision — cataract, glaucoma, retina, cornea, paediatric and more, led by fellowship-trained specialists.">
+<link rel="icon" href="assets/logo-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="nvision.css">
+<style>
+/* ============================================================
+   SPECIALITIES PAGE — styles scoped under .specpage so they
+   cannot affect the shared header/footer/nav from style.css
+   ============================================================ */
+.specpage{
+  /* Values match the shared :root palette in style.css exactly (or the nearest
+     shared token) so this page renders in the same brand colours as the rest
+     of the site, while keeping the .specpage-scoped class names below unchanged. */
+  --royal:#1267B1;
+  --medblue:#1587FF;
+  --teal:#00949A;
+  --emerald:#3FA672;
+  --aqua:#6FDDD3;
+  --mint:#CFF3EF;
+  --lavender:#E4DBFA;
+  --purple:#7C5CBF;
+  --coral:#E8785F;
+  --peach:#FBE3C2;
+  --orange:#EC9A1E;
+  --yellow:#F7C948;
+
+  --ink:#122232;
+  --ink-soft:#56697C;
+  --line:#DCE7EA;
+  --white:#ffffff;
+
+  --radius-lg:28px;
+  --radius-md:20px;
+  --radius-sm:14px;
+  --shadow-sm: 0 4px 16px rgba(11,47,78,0.08);
+  --shadow-md: 0 12px 32px rgba(11,47,78,0.12);
+  --shadow-lg: 0 24px 60px rgba(11,47,78,0.16);
+
+  --font-head:'Fraunces', serif;
+  --font-body:'Plus Jakarta Sans', sans-serif;
+  --font-script:'Fraunces', serif;
+
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;
+}
+.specpage img{display:block;max-width:100%;}
+.specpage button{border:none;background:none;cursor:pointer;font-family:inherit;}
+.specpage a{text-decoration:none;color:inherit;}
+.specpage h1,.specpage h2,.specpage h3,.specpage h4{font-family:var(--font-head);margin:0;color:var(--royal);}
+.specpage .icon{width:20px;height:20px;flex-shrink:0;}
+.specpage .container{width:100%;margin:0 auto;padding:0 10px;}
+
+@media (prefers-reduced-motion: reduce){
+  .specpage *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
+}
+
+/* ---------- reveal-on-scroll ---------- */
+.specpage .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.85,.32,1), transform .7s cubic-bezier(.22,.85,.32,1);}
+.specpage .reveal.in{opacity:1;transform:translateY(0);}
+
+/* ============ INTRO / HERO ============ */
+.specpage .intro{
+  position:relative; overflow:hidden;
+  background:linear-gradient(135deg, #EAF6FF 0%, #E8FBF5 45%, #F1F0FF 100%);
+  padding:20px 0 24px;
+}
+.specpage .intro::before, .specpage .intro::after{
+  content:''; position:absolute; border-radius:50%; filter:blur(2px); opacity:.55;
+}
+.specpage .intro::before{ width:220px; height:220px; background:radial-gradient(circle at 30% 30%, var(--aqua), transparent 70%); top:-60px; left:-60px;}
+.specpage .intro::after{ width:260px; height:260px; background:radial-gradient(circle at 70% 70%, var(--lavender), transparent 70%); bottom:-90px; right:-40px;}
+
+.specpage .breadcrumb{
+  display:flex; align-items:center; gap:8px; font-size:13.5px; color:var(--ink-soft); margin-bottom:16px; font-weight:500; position:relative; z-index:1;
+}
+.specpage .breadcrumb .sep{color:#9AA9C6;}
+.specpage .breadcrumb .current{color:var(--royal); font-weight:600;}
+
+.specpage .intro-grid{
+  display:grid; grid-template-columns:1.05fr 1fr; gap:36px; align-items:center; position:relative; z-index:1;
+}
+.specpage .intro-badge{
+  display:inline-flex; align-items:center; gap:8px; background:var(--mint); color:#087a63;
+  padding:7px 16px; border-radius:100px; font-size:12.5px; font-weight:700; letter-spacing:.2px; margin-bottom:14px;
+}
+.specpage .intro-heading{
+  font-size:clamp(30px, 3.6vw, 44px); line-height:1.12; font-weight:800; margin-bottom:14px;
+  background:linear-gradient(100deg, var(--royal) 20%, var(--teal) 85%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.specpage .intro-sub{font-size:16px; color:var(--ink-soft); max-width:460px; line-height:1.6; margin-bottom:24px;}
+.specpage .intro-cta{display:flex; gap:14px; flex-wrap:wrap;}
+.specpage .btn-solid{
+  display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, var(--medblue), var(--royal));
+  color:#fff; font-weight:700; font-size:14.5px; padding:14px 24px; border-radius:30px;
+  box-shadow:0 10px 24px rgba(46,123,224,0.32); transition:transform .2s ease;
+}
+.specpage .btn-solid:hover{transform:translateY(-2px);}
+.specpage .btn-line{
+  display:inline-flex; align-items:center; gap:8px; background:#fff; color:var(--royal); border:1.5px solid var(--line);
+  font-weight:700; font-size:14.5px; padding:14px 24px; border-radius:30px; transition:all .2s ease;
+}
+.specpage .btn-line:hover{border-color:var(--medblue); transform:translateY(-2px);}
+
+.specpage .intro-visual{position:relative;}
+.specpage .intro-visual .frame{
+  border-radius:32px; overflow:hidden; box-shadow:var(--shadow-lg);
+  aspect-ratio:5/4.4; position:relative;
+}
+.specpage .intro-visual .frame img{width:100%;height:100%;object-fit:cover;}
+.specpage .script-tag{
+  position:absolute; top:-14px; left:6%; font-family:var(--font-script); font-weight:600; font-style:italic;
+  font-size:24px; color:var(--teal); line-height:1.15; transform:rotate(-4deg); z-index:2;
+}
+.specpage .float-chip{
+  position:absolute; background:#fff; border-radius:16px; padding:11px 15px; box-shadow:var(--shadow-md);
+  display:flex; align-items:center; gap:10px; font-size:13px; font-weight:700; color:var(--royal);
+  animation:specfloaty 4.5s ease-in-out infinite; z-index:2;
+}
+.specpage .chip1{top:14px; right:-10px;}
+.specpage .chip2{bottom:-16px; left:-10px; animation-delay:1.1s;}
+.specpage .chip-ic{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+@keyframes specfloaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
+.specpage .intro-stats{display:flex; gap:28px; margin-top:34px; position:relative; z-index:1; flex-wrap:wrap;}
+.specpage .intro-stats .stat b{font-family:var(--font-head); font-size:26px; color:var(--royal); display:block;}
+.specpage .intro-stats .stat span{font-size:12.5px; color:var(--ink-soft); font-weight:600;}
+
+/* ============ PILL TABS ============ */
+.specpage .pills-wrap{position:relative; margin-top:30px; z-index:1;}
+.specpage .pills-scroll{display:flex; gap:10px; overflow-x:auto; padding:4px 4px 8px; scrollbar-width:none;}
+.specpage .pills-scroll::-webkit-scrollbar{display:none;}
+.specpage .pill{
+  flex-shrink:0; padding:10px 20px; border-radius:30px; font-size:13.5px; font-weight:600;
+  background:#fff; border:1.5px solid var(--line); color:var(--ink); white-space:nowrap; transition:all .2s ease;
+}
+.specpage .pill:hover{border-color:var(--medblue); transform:translateY(-1px);}
+.specpage .pill.active{
+  background:linear-gradient(135deg, var(--medblue), var(--royal)); color:#fff; border-color:transparent;
+  box-shadow:0 6px 18px rgba(46,123,224,0.35);
+}
+
+/* ============ SECTION SHELLS ============ */
+.specpage section{position:relative;}
+.specpage .section-pad{padding:24px 0;}
+.specpage .eyebrow{
+  display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; letter-spacing:.4px;
+  color:var(--orange); margin-bottom:10px;
+}
+.specpage .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+.specpage .section-heading{font-size:clamp(24px,2.6vw,32px); font-weight:800; margin-bottom:8px;}
+.specpage .section-desc{color:var(--ink-soft); font-size:15px; max-width:460px; line-height:1.6;}
+.specpage .section-head-row{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; margin-bottom:28px; flex-wrap:wrap;}
+.specpage .link-arrow{display:inline-flex; align-items:center; gap:6px; font-weight:700; font-size:14px; color:var(--medblue); white-space:nowrap;}
+.specpage .link-arrow svg{transition:transform .2s ease;}
+.specpage .link-arrow:hover svg{transform:translateX(3px);}
+
+/* ============ SPECIALITY GRID ============ */
+.specpage .spec-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+.specpage .spec-card{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden;
+  box-shadow:var(--shadow-sm); transition:transform .3s ease, box-shadow .3s ease; display:flex; flex-direction:column;
+}
+.specpage .spec-card:hover{transform:translateY(-7px); box-shadow:var(--shadow-lg);}
+.specpage .spec-media{position:relative; height:170px; overflow:hidden;}
+.specpage .spec-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.specpage .spec-card:hover .spec-media img{transform:scale(1.08);}
+.specpage .spec-icon{
+  position:absolute; bottom:-22px; left:20px; width:50px; height:50px; border-radius:15px;
+  display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-md);
+}
+.specpage .spec-icon .icon{width:24px;height:24px;color:#fff;}
+.specpage .spec-body{padding:32px 20px 22px; flex:1; display:flex; flex-direction:column;}
+.specpage .spec-body h3{font-size:17px; margin-bottom:8px;}
+.specpage .spec-body p{font-size:13.5px; color:var(--ink-soft); line-height:1.6; flex:1; margin-bottom:14px;}
+
+/* ============ FEATURED BAND ============ */
+.specpage .feature-band{
+  border-radius:32px; padding:50px; position:relative; overflow:hidden;
+  background:linear-gradient(120deg, #EAF7FF 0%, #EAFBF6 55%, #FFF1EA 100%);
+  display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;
+}
+.specpage .feature-img{border-radius:24px; overflow:hidden; box-shadow:var(--shadow-lg); height:300px; position:relative; z-index:1;}
+.specpage .feature-img img{width:100%;height:100%;object-fit:cover;}
+.specpage .feature-text{position:relative; z-index:1;}
+.specpage .feature-text .eyebrow{color:var(--coral);}
+.specpage .feature-text h2{margin:10px 0 14px;}
+.specpage .feature-text p{color:var(--ink-soft); margin-bottom:24px; max-width:440px; line-height:1.65; font-size:15px;}
+.specpage .btn-coral{
+  display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, var(--coral), var(--orange));
+  color:#fff; font-weight:700; font-size:14.5px; padding:13px 22px; border-radius:28px;
+  box-shadow:0 10px 22px rgba(251,123,107,0.35); transition:transform .2s ease;
+}
+.specpage .btn-coral:hover{transform:translateY(-2px);}
+
+/* ============ WHY CHOOSE ============ */
+.specpage .why-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:18px;}
+.specpage .why-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); padding:24px 18px; transition:transform .25s ease, box-shadow .25s ease;}
+.specpage .why-card:hover{transform:translateY(-5px); box-shadow:var(--shadow-md);}
+.specpage .why-ic{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.specpage .why-card h4{font-size:14.5px; margin-bottom:6px;}
+.specpage .why-card p{font-size:12.5px; color:var(--ink-soft); line-height:1.55;}
+
+/* ============ TECH CAROUSEL ============ */
+.specpage .tech-nav{display:flex; gap:10px;}
+.specpage .tech-nav button{
+  width:40px;height:40px;border-radius:50%; background:#fff; border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-sm); transition:.2s ease;
+}
+.specpage .tech-nav button:hover{background:var(--medblue); color:#fff; border-color:var(--medblue);}
+.specpage .tech-track{display:flex; gap:20px; overflow-x:auto; scroll-behavior:smooth; padding:6px 4px 12px; scrollbar-width:none;}
+.specpage .tech-track::-webkit-scrollbar{display:none;}
+.specpage .tech-card{flex:0 0 264px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); overflow:hidden; transition:transform .3s ease, box-shadow .3s ease;}
+.specpage .tech-card:hover{transform:translateY(-5px); box-shadow:var(--shadow-md);}
+.specpage .tech-card .img{height:150px; overflow:hidden;}
+.specpage .tech-card .img img{width:100%;height:100%;object-fit:cover; transition:transform .4s ease;}
+.specpage .tech-card:hover .img img{transform:scale(1.06);}
+.specpage .tech-card .body{padding:16px 18px 20px;}
+.specpage .tech-card h4{font-size:14.5px; margin-bottom:6px;}
+.specpage .tech-card p{font-size:12.5px; color:var(--ink-soft); line-height:1.55; margin-bottom:10px; min-height:52px;}
+
+/* ============ DOCTORS ============ */
+.specpage .doc-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+.specpage .doc-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); padding:14px; text-align:center; transition:transform .25s ease, box-shadow .25s ease;}
+.specpage .doc-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-md);}
+.specpage .doc-photo-wrap{position:relative; border-radius:16px; overflow:hidden; aspect-ratio:1/1; margin-bottom:12px;}
+.specpage .doc-photo-wrap img{width:100%;height:100%;object-fit:cover; transition:transform .4s ease;}
+.specpage .doc-card:hover .doc-photo-wrap img{transform:scale(1.05);}
+.specpage .doc-badge{position:absolute; top:8px; right:8px; width:28px; height:28px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-sm);}
+.specpage .doc-name{font-family:var(--font-head); font-weight:700; font-size:14.5px; color:var(--royal); margin-bottom:2px;}
+.specpage .doc-spec{font-size:12px; color:var(--ink-soft); margin-bottom:12px;}
+.specpage .doc-link{
+  display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:700; color:var(--medblue);
+  border:1.5px solid var(--line); padding:8px 14px; border-radius:12px; width:100%; justify-content:center; transition:all .2s ease;
+}
+.specpage .doc-link:hover{background:var(--medblue); color:#fff; border-color:var(--medblue);}
+
+/* ============ FAQ ============ */
+.specpage .faq-shell{
+  background:linear-gradient(120deg,#F0F8FF,#F1FFF9); border-radius:var(--radius-lg); padding:6px;
+  display:grid; grid-template-columns:0.85fr 1.15fr; gap:0; overflow:hidden; box-shadow:var(--shadow-sm);
+}
+.specpage .faq-left{
+  background:linear-gradient(140deg, var(--medblue), var(--teal)); border-radius:24px; padding:34px 30px;
+  color:#fff; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;
+}
+.specpage .faq-q-icon{width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.specpage .faq-left h3{color:#fff; font-size:22px; margin-bottom:10px;}
+.specpage .faq-left p{font-size:14px; opacity:.92; line-height:1.6; margin:0 0 20px;}
+.specpage .faq-left .btn-white{align-self:flex-start; background:#fff; color:var(--royal); font-weight:700; font-size:13.5px; padding:11px 18px; border-radius:24px; display:inline-flex; gap:6px; align-items:center;}
+.specpage .faq-right{padding:26px 22px;}
+.specpage .faq-item{background:#fff; border:1px solid var(--line); border-radius:16px; margin-bottom:10px; overflow:hidden;}
+.specpage .faq-q{width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 18px; font-weight:600; font-size:14.5px; color:var(--ink); text-align:left;}
+.specpage .faq-plus{width:22px;height:22px;flex-shrink:0; color:var(--medblue); transition:transform .25s ease;}
+.specpage .faq-item.open .faq-plus{transform:rotate(45deg);}
+.specpage .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease; padding:0 18px;}
+.specpage .faq-item.open .faq-a{padding:0 18px 16px;}
+.specpage .faq-a p{margin:0; font-size:13.5px; color:var(--ink-soft); line-height:1.6;}
+
+/* ============ CTA ============ */
+.specpage .cta-band{
+  background:linear-gradient(120deg, var(--medblue), var(--teal) 60%, var(--emerald));
+  border-radius:var(--radius-lg); padding:46px 40px; display:grid; grid-template-columns:1.3fr 0.7fr; gap:24px;
+  align-items:center; position:relative; overflow:hidden;
+}
+.specpage .cta-band h2{color:#fff; font-size:clamp(22px,2.6vw,30px); margin-bottom:10px;}
+.specpage .cta-band p{color:rgba(255,255,255,0.92); font-size:15px; margin-bottom:22px; max-width:420px;}
+.specpage .cta-actions{display:flex; gap:12px; flex-wrap:wrap;}
+.specpage .btn-cta-solid{background:#fff; color:var(--royal); font-weight:700; font-size:14.5px; padding:13px 22px; border-radius:28px; display:inline-flex; align-items:center; gap:8px;}
+.specpage .btn-cta-outline{border:1.5px solid rgba(255,255,255,0.7); color:#fff; font-weight:700; font-size:14.5px; padding:13px 22px; border-radius:28px; display:inline-flex; align-items:center; gap:8px;}
+.specpage .cta-visual{display:flex; justify-content:center;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .specpage .intro-grid{grid-template-columns:1fr;}
+  .specpage .intro-visual{order:-1; max-width:420px; margin:0 auto;}
+  .specpage .spec-grid{grid-template-columns:repeat(2,1fr);}
+  .specpage .why-grid{grid-template-columns:repeat(3,1fr);}
+  .specpage .feature-band{grid-template-columns:1fr; padding:36px 28px;}
+  .specpage .feature-img{height:240px; order:-1;}
+  .specpage .doc-grid{grid-template-columns:repeat(2,1fr);}
+  .specpage .faq-shell{grid-template-columns:1fr;}
+  .specpage .cta-band{grid-template-columns:1fr; text-align:left;}
+  .specpage .cta-visual{display:none;}
+}
+@media (max-width:720px){
+  .specpage .spec-grid{grid-template-columns:1fr;}
+  .specpage .why-grid{grid-template-columns:repeat(2,1fr);}
+  .specpage .doc-grid{grid-template-columns:1fr 1fr; gap:12px;}
+  .specpage .cta-band{padding:24px 14px;}
+  .specpage .cta-actions{flex-direction:column; align-items:stretch;}
+  .specpage .section-pad{padding:16px 0;}
+}
+@media (max-width:480px){
+  .specpage .container{padding:0 10px;}
+  .specpage .why-grid{grid-template-columns:1fr;}
+  .specpage .doc-grid{grid-template-columns:1fr 1fr;}
+  .specpage .intro-heading{font-size:28px;}
+  .specpage .chip1, .specpage .chip2{position:static; margin-top:10px; display:inline-flex;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================== UTILITY BAR (desktop only) ============================== -->
+<div class="utility-bar">
+  <div class="wrap">
+    <span class="utility-tag">Better Vision. Brighter Lives.</span>
+    <div class="utility-actions">
+      <a href="index.html#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>NABH Accredited</a>
+      <a href="index.html#" class="utility-emergency"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>Emergency: 080 6622 0000</a>
+      <a href="centers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Locations</a>
+      <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6M4 4h16v16H4z"/></svg>Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== MAIN HEADER ============================== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo" aria-label="Narayana Netralaya home">
+      <img class="logo-full" src="assets/logo-full.png" alt="Narayana Netralaya nVision - Eye Hospitals &amp; Research Center" width="1102" height="780">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <div class="nav-item nav-full-only"><a class="nav-link" href="about.html">About</a></div>
+      <div class="nav-item nav-core">
+        <button class="nav-link" data-dd="centres">Centres <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown"><a href="centers.html#bommasandra">Bommasandra</a><a href="centers.html#electronic-city">Electronic City</a><a href="centers.html#bannerghatta">Bannerghatta Road</a><a href="centers.html#whitefield">Whitefield</a><a href="centers.html#indiranagar">Indiranagar</a><a href="centers.html" style="color:var(--teal);font-weight:700;">View All Centres →</a></div>
+      </div>
+      <div class="nav-item nav-core"><a class="nav-link" href="doctors.html">Doctors</a></div>
+      <div class="nav-item nav-core"><a class="nav-link active" href="specialities.html">Specialities</a></div>
+      <div class="nav-item nav-full-only"><a class="nav-link" href="patient-stories.html">Patient Stories</a></div><div class="nav-item nav-full-only"><a class="nav-link" href="academics.html">Academics</a></div>
+      <div class="nav-item nav-full-only"><button class="nav-link" data-dd="laboratory">Laboratory <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button><div class="dropdown"><a href="laboratory.html">Laboratory</a><a href="research.html">Research &amp; nVision</a></div></div>
+      <div class="nav-item nav-full-only"><a class="nav-link" href="contact.html">Contact</a></div>
+    </nav>
+
+    <div class="nav-right">
+      <a href="tel:08066120000" class="icon-btn call-icon-btn" aria-label="Call Narayana Netralaya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg></a>
+      <div class="callus"><small>Call Us</small><a href="tel:08066120000">080 6612 0000</a></div>
+      <a href="appointment.html" class="btn btn-primary nav-cta">Book Appointment</a>
+      <button class="icon-btn hamburger" id="openMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== MOBILE / TABLET MENU ============================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-top">
+    <div class="logo">
+      <img class="logo-full" src="assets/logo-full.png" alt="Narayana Netralaya nVision - Eye Hospitals &amp; Research Center" width="1102" height="780">
+    </div>
+    <button class="mm-close" id="closeMenu" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="mm-list">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="mm-group">
+      <button class="mm-toggle" type="button">Centres <svg class="mm-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mm-submenu">
+        <a href="centers.html#bommasandra">Bommasandra</a>
+        <a href="centers.html#electronic-city">Electronic City</a>
+        <a href="centers.html#bannerghatta">Bannerghatta Road</a>
+        <a href="centers.html#whitefield">Whitefield</a>
+        <a href="centers.html#indiranagar">Indiranagar</a>
+        <a href="centers.html">View All Centres →</a>
+      </div>
+    </div>
+    <a href="doctors.html">Doctors</a>
+    <div class="mm-group open">
+      <button class="mm-toggle" type="button" style="color:var(--royal)">Specialities <svg class="mm-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mm-submenu">
+        <a href="cataract.html">Cataract</a>
+        <a href="glaucoma.html">Glaucoma</a>
+        <a href="diabetic-retinopathy.html">Diabetic Retinopathy</a>
+        <a href="macular-degeneration.html">Macular Degeneration</a>
+        <a href="corneal-diseases.html">Cornea</a>
+        <a href="refractive-surgery.html">Vision Correction</a>
+        <a href="advanced-care.html">Advanced Eye Care</a>
+        <a href="vision-synapse.html">Vision Synapse Clinics</a>
+        <a href="specialities.html">View All Specialities →</a>
+      </div>
+    </div>
+    <a href="patient-stories.html">Patient Stories</a>
+    <a href="academics.html">Academics</a>
+    <div class="mm-group">
+      <button class="mm-toggle" type="button">Laboratory <svg class="mm-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mm-submenu">
+        <a href="laboratory.html">Laboratory</a>
+        <a href="research.html">Research &amp; nVision</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="mm-cta"><a href="appointment.html" class="btn btn-primary">Book Appointment</a></div>
+  <div class="mm-foot">
+    <a href="tel:08066120000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>Call: 080 6612 0000</a>
+    <a href="index.html#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3"/></svg>Emergency: 080 6622 0000</a>
+  </div>
+</div>
+
+<main>
+<div class="specpage">
+
+<!-- ============ INTRO ============ -->
+<section class="intro">
+  <div class="container">
+    <div class="breadcrumb reveal">
+      <a href="index.html">Home</a><span class="sep">&rsaquo;</span>
+      <span class="current">Specialities</span>
+    </div>
+
+    <div class="intro-grid">
+      <div class="reveal">
+        <span class="intro-badge">Eye Care Specialities</span>
+        <h1 class="intro-heading">Specialised Care for Every Vision Need</h1>
+        <p class="intro-sub">From routine screenings to complex micro-surgery, our sub-speciality clinics bring together experienced ophthalmologists and precision technology under one roof — so every patient gets care built around their exact condition.</p>
+        <div class="intro-cta">
+          <a href="#grid" class="btn-solid">Explore Specialities
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="appointment.html" class="btn-line">Book a Consultation</a>
+        </div>
+        <div class="intro-stats">
+          <div class="stat"><b>12+</b><span>Sub-specialities</span></div>
+          <div class="stat"><b>50+</b><span>Specialist Doctors</span></div>
+          <div class="stat"><b>3+ Decades</b><span>Trusted by Patients</span></div>
+        </div>
+      </div>
+
+      <div class="intro-visual reveal">
+        <div class="script-tag">Better Vision<br>Brighter Lives</div>
+        <div class="frame">
+          <img src="assets/photos/consult-family.jpg" alt="Ophthalmologist consulting a family at Narayana Netralaya">
+        </div>
+        <div class="float-chip chip1"><span class="chip-ic" style="background:var(--mint);">🩺</span> Expert Diagnosis</div>
+        <div class="float-chip chip2"><span class="chip-ic" style="background:var(--peach);">✨</span> Advanced Technology</div>
+      </div>
+    </div>
+
+    <!-- PILL TABS -->
+    <div class="pills-wrap">
+      <div class="pills-scroll" id="pillsScroll">
+        <button class="pill active" data-cat="all">All</button>
+        <button class="pill" data-cat="cornea">Cornea</button>
+        <button class="pill" data-cat="cataract">Cataract</button>
+        <button class="pill" data-cat="glaucoma">Glaucoma</button>
+        <button class="pill" data-cat="retina">Retina</button>
+        <button class="pill" data-cat="paed">Paediatric Ophthalmology</button>
+        <button class="pill" data-cat="refractive">Refractive Surgery</button>
+        <button class="pill" data-cat="oculoplasty">Oculoplasty</button>
+        <button class="pill" data-cat="neuro">Neuro Ophthalmology</button>
+        <button class="pill" data-cat="uveitis">Uveitis</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIALITIES GRID ============ -->
+<section class="section-pad" id="grid">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div>
+        <div class="eyebrow">Our Specialities</div>
+        <h2 class="section-heading">A dedicated clinic for every part of the eye</h2>
+        <p class="section-desc">Each speciality is led by fellowship-trained consultants using condition-specific diagnostic and surgical technology.</p>
+      </div>
+    </div>
+    <div class="spec-grid" id="specGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FEATURED SPECIALITY ============ -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="container">
+    <div class="feature-band reveal">
+      <div class="feature-img">
+        <img src="assets/photos/eye-amber.jpg" alt="Close-up retina examination at Narayana Netralaya">
+      </div>
+      <div class="feature-text">
+        <div class="eyebrow">Featured Speciality</div>
+        <h2 class="section-heading">Advanced Retina Care</h2>
+        <p>Our retina team diagnoses and treats diabetic retinopathy, macular degeneration and retinal detachment using wide-field imaging, OCT angiography and micro-incision vitrectomy — protecting sight even in the most complex cases.</p>
+        <a href="diabetic-retinopathy.html" class="btn-coral">Explore Care
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section class="section-pad" style="background:linear-gradient(180deg,#fff,#F6FAFF);">
+  <div class="container">
+    <div class="section-head-row reveal" style="justify-content:center;text-align:center;">
+      <div style="margin:0 auto;">
+        <div class="eyebrow" style="justify-content:center;">Why Narayana Netralaya</div>
+        <h2 class="section-heading">Built around the way you see the world</h2>
+      </div>
+    </div>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ADVANCED TECHNOLOGY ============ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div>
+        <div class="eyebrow">Advanced Technology</div>
+        <h2 class="section-heading">Precision equipment behind every diagnosis</h2>
+      </div>
+      <div class="tech-nav">
+        <button id="techPrev" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18L9 12L15 6"/></svg></button>
+        <button id="techNext" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18L15 12L9 6"/></svg></button>
+      </div>
+    </div>
+    <div class="tech-track" id="techTrack"></div>
+  </div>
+</section>
+
+<!-- ============ DOCTORS ============ -->
+<section class="section-pad" style="background:linear-gradient(180deg,#F6FAFF,#fff);" id="specialists">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div>
+        <div class="eyebrow">Our Specialists</div>
+        <h2 class="section-heading">Meet the doctors behind your care</h2>
+      </div>
+      <a href="doctors.html" class="link-arrow">View All Doctors <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="doc-grid" id="docGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="faq-shell reveal">
+      <div class="faq-left">
+        <div>
+          <div class="faq-q-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 2-3 4M12 17h.01"/></svg></div>
+          <h3>Questions patients ask us most</h3>
+          <p>Still unsure which speciality fits your symptoms? Our care coordinators can guide you to the right consultant.</p>
+        </div>
+        <a href="appointment.html" class="btn-white">Talk to a Coordinator
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--royal)" stroke-width="2.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="faq-right" id="faqRight"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="reveal" style="padding-bottom:70px;">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Find the Right Eye Care for You</h2>
+        <p>Speak with our specialists to understand which speciality clinic matches your symptoms — book a consultation today.</p>
+        <div class="cta-actions">
+          <a href="appointment.html" class="btn-cta-solid">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--royal)" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Book Appointment
+          </a>
+          <a href="tel:08066120000" class="btn-cta-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call 080 6612 0000
+          </a>
+        </div>
+      </div>
+      <div class="cta-visual">
+        <svg width="180" height="180" viewBox="0 0 200 200"><path d="M10 100s35-55 90-55 90 55 90 55-35 55-90 55-90-55-90-55Z" fill="rgba(255,255,255,0.18)"/><circle cx="100" cy="100" r="34" fill="rgba(255,255,255,0.9)"/><circle cx="100" cy="100" r="16" fill="var(--royal)"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+  <a href="#" class="footer-totop" id="footerToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></a>
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <p>Committed to excellence in eye care, education and research for a brighter, healthier world.</p>
+      <ul class="footer-contact">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3"/></svg>080 6612 0000</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6M4 4h16v16H4z"/></svg>care@narayananetralaya.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="specialities.html">Specialities</a></li>
+        <li><a href="centers.html">Centres</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="laboratory.html">Laboratory</a></li>
+        <!-- nv:BEGIN foot --><li><a href="research.html">Research &amp; nVision</a></li><li><a href="vision-synapse.html">Vision Synapse</a></li><li><a href="advanced-care.html">Advanced Eye Care</a></li><li><a href="about.html#care-without-a-price-tag">Community</a></li><!-- nv:END foot -->
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Patient Information</h5>
+      <ul>
+        <li><a href="index.html#">Latest News</a></li>
+        <li><a href="patient-stories.html">Patient Stories</a></li><li><a href="index.html#">Insurance</a></li>
+        <li><a href="index.html#">International Patients</a></li>
+        <li><a href="index.html#">Careers</a></li>
+        <li><a href="contact.html">Get in Touch</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Our Locations</h5>
+      <ul class="footer-loc-col">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Bommasandra, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Electronic City, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Bannerghatta Road, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Whitefield, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Indiranagar, Bengaluru</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Follow Us</h5>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l.5-3.5H13V7.3c0-1 .3-1.7 1.8-1.7H17V2.4C16.6 2.3 15.4 2 14 2c-2.9 0-4.9 1.8-4.9 5v2.5H6V13h3.1v9H13z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.1 0 4.9 2.7 4.9 6.2V21h-4v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 3V21h-4z"/></svg></a>
+      </div>
+      <p class="footer-tagline">Better Vision. Healthier Lives.</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Narayana Netralaya nVision Eye Hospitals &amp; Research Center.</span>
+    <div class="footer-bottom-links"><a href="coming-soon.html?page=privacy">Privacy Policy</a><a href="coming-soon.html?page=terms">Terms</a></div>
+  </div>
+</footer>
+
+<!-- ============================== MOBILE BOTTOM NAVIGATION ============================== -->
+<nav class="mobile-bar" id="mobileBar" aria-label="Mobile primary">
+  <a class="mb-item" data-bar="home" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</a>
+  <a class="mb-item active" data-bar="eyecare" href="specialities.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>Eye Care</a>
+  <a class="mb-item" data-bar="doctors" href="doctors.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Doctor</a>
+  <a class="mb-item" data-bar="centres" href="centers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Centres</a>
+  <a class="mb-item primary" data-bar="appointment" href="appointment.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Appointment</a>
+</nav>
+
+<!-- ============================== FLOATING HELP (desktop/tablet) ============================== -->
+<div class="float-stack" id="floatStack">
+  <a class="float-btn" href="appointment.html" aria-label="Book an Appointment" title="Book an Appointment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></a>
+  <a class="float-btn" href="tel:08066120000" aria-label="Call Narayana Netralaya" title="Call Us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg></a>
+</div>
+
+<!-- ============================== CHATBOT WIDGET ============================== -->
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Netra Assistant chat" aria-hidden="true">
+  <div class="chat-head">
+    <div class="chat-avatar"><img src="assets/charboat.png" alt=""></div>
+    <div class="chat-head-text"><b>Netra Assistant</b><span>Online now</span></div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">Hi, I'm Netra Assistant 👋 Ask me about doctors, specialities, centres or appointments — or tap a quick option below.</div>
+  </div>
+  <div class="chat-quick" id="chatQuick">
+    <button data-reply="appointment">Book Appointment</button>
+    <button data-reply="doctor">Find a Doctor</button>
+    <button data-reply="centres">Find a Centre</button>
+    <button data-reply="support">Contact Support</button>
+  </div>
+  <form class="chat-input-row" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Type your question..." autocomplete="off" aria-label="Ask Netra Assistant">
+    <button type="submit" class="chat-send" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+</div>
+<button class="chatbot-btn" id="chatToggle" aria-label="Open chat assistant" aria-expanded="false">
+  <span class="chatbot-dot"></span>
+  <img class="ic-chat" src="assets/charboat.png" alt="">
+  <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</button>
+
+<script src="script.js"></script>
+<script src="nvision.js"></script>
+<script>
+(function(){
+  /* ---------- DATA ---------- */
+  var specialities = [
+    {name:"Cataract",cat:"cataract",bg:"var(--medblue)",tint:"#DCEEFF",img:"assets/photos/eye-blue.jpg",desc:"Advanced lens replacement surgery with premium IOL options for clearer, sharper vision.",href:"cataract.html",
+      icon:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>'},
+    {name:"Glaucoma",cat:"glaucoma",bg:"var(--purple)",tint:"#EEE6FF",img:"assets/photos/equipment.jpg",desc:"Early detection and pressure management to protect the optic nerve from vision loss.",href:"glaucoma.html",
+      icon:'<path d="M12 3V6M12 18V21M3 12H6M18 12H21"/><circle cx="12" cy="12" r="4"/>'},
+    {name:"Retina",cat:"retina",bg:"var(--orange)",tint:"#FFE9DA",img:"assets/photos/eye-amber.jpg",desc:"Comprehensive diagnosis and micro-surgery for diabetic retinopathy and macular disease.",href:"diabetic-retinopathy.html",
+      icon:'<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>'},
+    {name:"Cornea",cat:"cornea",bg:"var(--teal)",tint:"#DFFCF3",img:"assets/photos/eye-green.jpg",desc:"Treatment for keratoconus, infections and corneal transplants using precision imaging.",href:"corneal-diseases.html",
+      icon:'<ellipse cx="12" cy="12" rx="7" ry="9"/>'},
+    {name:"Refractive Surgery",cat:"refractive",bg:"#C88A00",tint:"#FFF3C4",img:"assets/photos/hero-exam.jpg",desc:"Bladeless LASIK and SMILE procedures for lasting freedom from glasses and lenses.",href:"refractive-surgery.html",
+      icon:'<path d="M4 12L10 6M4 12L10 18M4 12H20"/>'},
+    {name:"Paediatric Eye Care",cat:"paed",bg:"var(--coral)",tint:"#FFE4E1",img:"assets/photos/spec-paediatric-care.jpg",desc:"Gentle screening and treatment for squint, lazy eye and childhood vision disorders.",href:"paediatric-eye-care.html",
+      icon:'<circle cx="9" cy="10" r="1.3" fill="#fff" stroke="none"/><circle cx="15" cy="10" r="1.3" fill="#fff" stroke="none"/><path d="M8 16c1.5 1.5 6.5 1.5 8 0"/><circle cx="12" cy="12" r="9"/>'},
+    {name:"Oculoplasty",cat:"oculoplasty",bg:"var(--emerald)",tint:"#E4F5EC",img:"assets/photos/doctor-man-3.jpg",desc:"Reconstructive and cosmetic procedures for eyelids, tear ducts and the eye socket.",href:"doctors.html",
+      icon:'<path d="M4 12c0 0 4-5 8-5s8 5 8 5"/><path d="M4 12c0 0 4 5 8 5s8-5 8-5" opacity=".55"/>'},
+    {name:"Neuro Ophthalmology",cat:"neuro",bg:"var(--royal)",tint:"#E7F0FC",img:"assets/photos/consult-senior.jpg",desc:"Diagnosing vision problems linked to the brain, nerves and neurological conditions.",href:"doctors.html",
+      icon:'<path d="M12 3c-4 0-6 3-6 6c0 3 2 3 2 6c0 3 2 4 4 4s4-1 4-4c0-3 2-3 2-6c0-3-2-6-6-6Z"/>'},
+    {name:"Uveitis",cat:"uveitis",bg:"var(--aqua)",tint:"#E1FBFF",img:"assets/photos/spec-general-care.jpg",desc:"Managing inflammatory eye conditions with immunology-backed, personalised protocols.",href:"doctors.html",
+      icon:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.3" fill="#fff" stroke="none"/>'},
+    {name:"Low Vision",cat:"all",bg:"var(--lavender)",tint:"#F1EEFE",img:"assets/photos/portrait-elder.jpg",desc:"Rehabilitation and assistive devices to maximise remaining vision and independence.",href:"doctors.html",
+      icon:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/>'},
+    {name:"Dry Eye",cat:"all",bg:"#22B8C4",tint:"#DFF7F9",img:"assets/photos/portrait-woman.jpg",desc:"Targeted tear-film therapy to relieve irritation, dryness and discomfort long-term.",href:"doctors.html",
+      icon:'<path d="M12 3s-6 8-6 12a6 6 0 0 0 12 0c0-4-6-12-6-12Z"/>'},
+    {name:"Contact Lens Services",cat:"all",bg:"var(--peach)",tint:"#FFF1E4",img:"assets/photos/doctor-woman.jpg",desc:"Custom-fitted lenses including scleral and specialty lenses for irregular corneas.",href:"doctors.html",
+      icon:'<circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="#fff" stroke="none"/>'}
+  ];
+
+  var whyChoose = [
+    {t:"Expert Specialists",d:"Fellowship-trained ophthalmologists across every sub-speciality.",bg:"#DCEEFF",c:"var(--medblue)",icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>'},
+    {t:"Advanced Technology",d:"Diagnostic and surgical equipment matched to global standards.",bg:"#E4F5EC",c:"var(--emerald)",icon:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'},
+    {t:"Personalised Care",d:"Treatment plans shaped around your condition and lifestyle.",bg:"#FFE4E1",c:"var(--coral)",icon:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>'},
+    {t:"Comprehensive Eye Care",d:"From screening to surgery to rehabilitation, all in one place.",bg:"#EEE6FF",c:"var(--purple)",icon:'<path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>'},
+    {t:"Patient-Centred Approach",d:"Clear communication and support at every step of your journey.",bg:"#FFF3C4",c:"#C88A00",icon:'<path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5z"/>'}
+  ];
+
+  var techEquipment = [
+    {n:"Optical Coherence Tomography",d:"Cross-sectional imaging of the optic nerve head and retina for early detection.",img:"assets/photos/hero-exam.jpg"},
+    {n:"Gonioscopy &amp; Tonometry",d:"Precision intraocular pressure and drainage-angle assessment for glaucoma.",img:"assets/photos/equipment.jpg"},
+    {n:"Microbiology &amp; Diagnostic Lab",d:"NABH-accredited lab support for accurate infection and inflammation workups.",img:"assets/photos/consult-senior.jpg"},
+    {n:"Electrophysiology Suite",d:"VEP, ERG and EOG testing to trace vision loss along the optic pathway.",img:"assets/photos/eye-green.jpg"},
+    {n:"Ocular Surface Imaging",d:"Detailed tear-film and surface analysis for chronic dry eye management.",img:"assets/photos/eye-blue.jpg"},
+    {n:"Uveitis Immunology Lab",d:"In-house fluid and blood panels to trace infectious and autoimmune causes.",img:"assets/photos/spec-general-care.jpg"}
+  ];
+
+  var doctors = [
+    {n:"Dr. Rohit Shetty",s:"Cataract &amp; Refractive Surgery",img:"assets/photos/real/real-doctor-man.png"},
+    {n:"Dr. Shweta Agarwal",s:"Cornea &amp; Refractive Surgery",img:"assets/photos/real/real-doctor-woman-c.png"},
+    {n:"Dr. K Bhujang Shetty",s:"Retina &amp; Vitreous",img:"assets/photos/real/real-staff-b.png"},
+    {n:"Dr. Ravindra Babu K R",s:"Glaucoma Services",img:"assets/photos/doctor-man-3.jpg"}
+  ];
+
+  var faqs = [
+    {q:"How do I know which speciality is right for me?",a:"Book a general consultation — our optometrists screen your symptoms and refer you to the right sub-speciality clinic on the same visit."},
+    {q:"Are all specialists available at every centre?",a:"Most sub-specialities are available across our Indiranagar, Whitefield and Bommasandra centres; complex retina and neuro cases are centralised at Bommasandra."},
+    {q:"Do I need a referral to see a specialist?",a:"No referral is required. You can book directly with any speciality clinic through our website or appointment desk."},
+    {q:"Is emergency eye care available?",a:"Yes, our centres offer prompt emergency ophthalmic care for injuries, sudden vision loss and acute infections."}
+  ];
+
+  /* ---------- RENDER ---------- */
+  var specGrid = document.getElementById('specGrid');
+  function renderSpecs(filter){
+    specGrid.innerHTML = specialities
+      .filter(function(s){ return filter==='all' ? true : s.cat===filter; })
+      .map(function(s,i){
+        return '<div class="spec-card reveal in" style="transition-delay:'+(i*60)+'ms">'+
+          '<div class="spec-media"><img src="'+s.img+'" alt="'+s.name+' eye care at Narayana Netralaya" loading="lazy">'+
+            '<span class="spec-icon" style="background:'+s.bg+'"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">'+s.icon+'</svg></span>'+
+          '</div>'+
+          '<div class="spec-body">'+
+            '<h3>'+s.name+'</h3>'+
+            '<p>'+s.desc+'</p>'+
+            '<a href="'+s.href+'" class="link-arrow">Explore Speciality <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'+
+          '</div>'+
+        '</div>';
+      }).join('');
+  }
+  renderSpecs('all');
+
+  document.querySelectorAll('.specpage .pill').forEach(function(p){
+    p.addEventListener('click', function(){
+      document.querySelectorAll('.specpage .pill').forEach(function(x){ x.classList.remove('active'); });
+      p.classList.add('active');
+      renderSpecs(p.getAttribute('data-cat'));
+    });
+  });
+
+  document.getElementById('whyGrid').innerHTML = whyChoose.map(function(w){
+    return '<div class="why-card reveal in">'+
+      '<div class="why-ic" style="background:'+w.bg+';color:'+w.c+';"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'+w.icon+'</svg></div>'+
+      '<h4>'+w.t+'</h4><p>'+w.d+'</p>'+
+    '</div>';
+  }).join('');
+
+  document.getElementById('techTrack').innerHTML = techEquipment.map(function(t){
+    return '<div class="tech-card reveal in">'+
+      '<div class="img"><img src="'+t.img+'" alt="'+t.n+' at Narayana Netralaya" loading="lazy"></div>'+
+      '<div class="body"><h4>'+t.n+'</h4><p>'+t.d+'</p>'+
+        '<a href="#specialists" class="link-arrow">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+
+  document.getElementById('docGrid').innerHTML = doctors.map(function(d){
+    return '<div class="doc-card reveal in">'+
+      '<div class="doc-photo-wrap"><img src="'+d.img+'" alt="'+d.n+', '+d.s+'" loading="lazy"></div>'+
+      '<div class="doc-name">'+d.n+'</div>'+
+      '<div class="doc-spec">'+d.s+'</div>'+
+      '<a href="doctors.html" class="doc-link">View Profile <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'+
+    '</div>';
+  }).join('');
+
+  document.getElementById('faqRight').innerHTML = faqs.map(function(f){
+    return '<div class="faq-item">'+
+      '<button class="faq-q">'+f.q+'<svg class="faq-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>'+
+      '<div class="faq-a"><p>'+f.a+'</p></div>'+
+    '</div>';
+  }).join('');
+
+  document.querySelectorAll('.specpage .faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.specpage .faq-item').forEach(function(o){ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+
+  /* tech carousel arrows */
+  var track = document.getElementById('techTrack');
+  document.getElementById('techNext').addEventListener('click', function(){ track.scrollBy({left:284, behavior:'smooth'}); });
+  document.getElementById('techPrev').addEventListener('click', function(){ track.scrollBy({left:-284, behavior:'smooth'}); });
+
+  /* reveal on scroll for elements not already marked in */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  document.querySelectorAll('.specpage .reveal:not(.in)').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

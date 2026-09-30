@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Narayana Netralaya nVision Eye Hospitals &amp; Research Center</title>
+<meta name="description" content="Contact Narayana Netralaya nVision Eye Hospitals &amp; Research Center — phone, email and centre locations across Bengaluru.">
+<link rel="icon" href="assets/logo-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="nvision.css">
+<style>
+.contact-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:start; }
+.contact-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius-l); padding:26px; box-shadow:var(--shadow-sm); }
+.contact-card h3{ font-size:19px; margin-bottom:4px; }
+.contact-card > p{ color:var(--slate); font-size:14px; margin-bottom:18px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+.form-field{ display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+.form-row .form-field{ margin-bottom:0; }
+.form-field label{ font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--slate-soft); }
+.form-field input, .form-field select, .form-field textarea{ border:1.5px solid var(--line); border-radius:11px; padding:12px 14px; font-size:14px; font-family:inherit; color:var(--ink); background:var(--paper); width:100%; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus{ border-color:var(--teal); background:#fff; outline:none; }
+.form-field textarea{ resize:vertical; min-height:110px; }
+.contact-status{ margin-top:4px; padding:14px 16px; border-radius:12px; font-size:13.5px; font-weight:600; display:none; align-items:center; gap:10px; }
+.contact-status.show{ display:flex; }
+.contact-status.ok{ background:#E4F5EC; color:#1F6B45; }
+.contact-info-card{ background:linear-gradient(160deg,#EAF6FF,#F1FBF8); border-radius:var(--radius-l); padding:26px; margin-bottom:16px; }
+.contact-info-list{ display:flex; flex-direction:column; gap:16px; }
+.contact-info-item{ display:flex; gap:14px; align-items:flex-start; }
+.contact-info-ic{ width:44px; height:44px; border-radius:50%; background:#fff; color:var(--teal); display:flex; align-items:center; justify-content:center; flex:none; box-shadow:var(--shadow-sm); }
+.contact-info-ic svg{ width:19px; height:19px; }
+.contact-info-item b{ display:block; font-size:14px; color:var(--navy); }
+.contact-info-item span, .contact-info-item a{ font-size:13px; color:var(--slate); }
+.contact-centres-list{ display:flex; flex-direction:column; gap:10px; }
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } .form-row{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- ============================== UTILITY BAR (desktop only) ============================== -->
+<div class="utility-bar">
+  <div class="wrap">
+    <span class="utility-tag">Better Vision. Brighter Lives.</span>
+    <div class="utility-actions">
+      <a href="index.html#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>NABH Accredited</a>
+      <a href="index.html#" class="utility-emergency"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>Emergency: 080 6622 0000</a>
+      <a href="centers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Locations</a>
+      <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6M4 4h16v16H4z"/></svg>Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== MAIN HEADER ============================== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo" aria-label="Narayana Netralaya home">
+      <img class="logo-full" src="assets/logo-full.png" alt="Narayana Netralaya nVision - Eye Hospitals &amp; Research Center" width="1102" height="780">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <div class="nav-item nav-full-only"><a class="nav-link" href="about.html">About</a></div>
+      <div class="nav-item nav-core">
+        <button class="nav-link" data-dd="centres">Centres <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown"><a href="centers.html#bommasandra">Bommasandra</a><a href="centers.html#electronic-city">Electronic City</a><a href="centers.html#bannerghatta">Bannerghatta Road</a><a href="centers.html#whitefield">Whitefield</a><a href="centers.html#indiranagar">Indiranagar</a><a href="centers.html" style="color:var(--teal);font-weight:700;">View All Centres →</a></div>
+      </div>
+      <div class="nav-item nav-core"><a class="nav-link" href="doctors.html">Doctors</a></div>
+      <div class="nav-item nav-core">
+        <button class="nav-link" data-dd="specialities">Specialities <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown"><a href="cataract.html">Cataract</a><a href="glaucoma.html">Glaucoma</a><a href="diabetic-retinopathy.html">Diabetic Retinopathy</a><a href="macular-degeneration.html">Macular Degeneration</a><a href="corneal-diseases.html">Cornea</a><a href="refractive-surgery.html">Vision Correction</a><a href="advanced-care.html">Advanced Eye Care</a><a href="vision-synapse.html">Vision Synapse Clinics</a><a href="specialities.html" style="color:var(--teal);font-weight:700;">View All Specialities →</a></div>
+      </div>
+      <div class="nav-item nav-full-only"><a class="nav-link" href="patient-stories.html">Patient Stories</a></div><div class="nav-item nav-full-only"><a class="nav-link" href="academics.html">Academics</a></div>
+      <div class="nav-item nav-full-only"><button class="nav-link" data-dd="laboratory">Laboratory <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button><div class="dropdown"><a href="laboratory.html">Laboratory</a><a href="research.html">Research &amp; nVision</a></div></div>
+      <div class="nav-item nav-full-only"><a class="nav-link active" href="contact.html">Contact</a></div>
+    </nav>
+
+    <div class="nav-right">
+      <a href="tel:08066120000" class="icon-btn call-icon-btn" aria-label="Call Narayana Netralaya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg></a>
+      <div class="callus"><small>Call Us</small><a href="tel:08066120000">080 6612 0000</a></div>
+      <a href="appointment.html" class="btn btn-primary nav-cta">Book Appointment</a>
+      <button class="icon-btn hamburger" id="openMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== MOBILE / TABLET MENU ============================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-top">
+    <div class="logo">
+      <img class="logo-full" src="assets/logo-full.png" alt="Narayana Netralaya nVision - Eye Hospitals &amp; Research Center" width="1102" height="780">
+    </div>
+    <button class="mm-close" id="closeMenu" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="mm-list">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="mm-group">
+      <button class="mm-toggle" type="button">Centres <svg class="mm-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mm-submenu">
+        <a href="centers.html#bommasandra">Bommasandra</a>
+        <a href="centers.html#electronic-city">Electronic City</a>
+        <a href="centers.html#bannerghatta">Bannerghatta Road</a>
+        <a href="centers.html#whitefield">Whitefield</a>
+        <a href="centers.html#indiranagar">Indiranagar</a>
+        <a href="centers.html">View All Centres →</a>
+      </div>
+    </div>
+    <a href="doctors.html">Doctors</a>
+    <div class="mm-group">
+      <button class="mm-toggle" type="button">Specialities <svg class="mm-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mm-submenu">
+        <a href="cataract.html">Cataract</a>
+        <a href="glaucoma.html">Glaucoma</a>
+        <a href="diabetic-retinopathy.html">Diabetic Retinopathy</a>
+        <a href="macular-degeneration.html">Macular Degeneration</a>
+        <a href="corneal-diseases.html">Cornea</a>
+        <a href="refractive-surgery.html">Vision Correction</a>
+        <a href="advanced-care.html">Advanced Eye Care</a>
+        <a href="vision-synapse.html">Vision Synapse Clinics</a>
+        <a href="specialities.html">View All Specialities →</a>
+      </div>
+    </div>
+    <a href="patient-stories.html">Patient Stories</a>
+    <a href="academics.html">Academics</a>
+    <div class="mm-group">
+      <button class="mm-toggle" type="button">Laboratory <svg class="mm-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mm-submenu">
+        <a href="laboratory.html">Laboratory</a>
+        <a href="research.html">Research &amp; nVision</a>
+      </div>
+    </div>
+    <a href="contact.html" style="color:var(--royal)">Contact</a>
+  </div>
+  <div class="mm-cta"><a href="appointment.html" class="btn btn-primary">Book Appointment</a></div>
+  <div class="mm-foot">
+    <a href="tel:08066120000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>Call: 080 6612 0000</a>
+    <a href="tel:08066220000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3"/></svg>Emergency: 080 6622 0000</a>
+  </div>
+</div>
+
+<main>
+
+<section class="section-tight page-theme-aqua">
+  <div class="wrap">
+    <div class="breadcrumb" style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--slate);margin-bottom:10px;font-weight:500;">
+      <a href="index.html">Home</a><span>&rsaquo;</span><span style="color:var(--navy);font-weight:700;">Contact</span>
+    </div>
+    <div class="section-head reveal">
+      <p class="eyebrow">Get in Touch</p>
+      <h1 style="font-size:clamp(28px,3.6vw,42px);margin-top:10px;">We're here to help</h1>
+      <p>Questions about a speciality, a centre, or your appointment? Send us a message or reach out directly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight page-theme-mint">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>Send us a message</h3>
+        <p>Our patient care team typically responds within one business day.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field"><label for="c-name">Full Name</label><input type="text" id="c-name" name="name" required></div>
+            <div class="form-field"><label for="c-phone">Phone Number</label><input type="tel" id="c-phone" name="phone" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label for="c-email">Email Address</label><input type="email" id="c-email" name="email" required></div>
+            <div class="form-field"><label for="c-spec">Speciality</label>
+              <select id="c-spec" name="speciality">
+                <option>General Enquiry</option>
+                <option>Cataract</option>
+                <option>Retina</option>
+                <option>Cornea</option>
+                <option>Glaucoma</option>
+                <option>Paediatric Eye Care</option>
+                <option>Academics</option>
+                <option>Laboratory</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required placeholder="Tell us how we can help..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:4px;">Send Message</button>
+          <div class="contact-status ok" id="contactStatus"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Thank you — our team will reach out shortly.</span></div>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div class="contact-info-card">
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg></div>
+              <div><b>Call Us</b><a href="tel:08066120000">080 6612 0000</a></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-ic" style="color:var(--coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3"/></svg></div>
+              <div><b>Emergency</b><a href="tel:08066220000">080 6622 0000</a></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6M4 4h16v16H4z"/></svg></div>
+              <div><b>Email</b><span>care@narayananetralaya.com</span></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg></div>
+              <div><b>Working Hours</b><span>Mon&ndash;Sat, 9am&ndash;7pm</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-centres-list">
+          <div class="centre-row-card">
+            <div class="cr-thumb" style="--cc:var(--amber);--cbg:#FDF0DC;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+            <div class="cr-body"><div class="cr-title-row"><h4>Bommasandra</h4><span class="cr-badge">Main Centre</span></div></div>
+            <a href="centers.html#bommasandra" class="cr-cta"><span class="cr-cta-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>View</a>
+          </div>
+          <div class="centre-row-card">
+            <div class="cr-thumb" style="--cc:var(--green);--cbg:#E4F5EC;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+            <div class="cr-body"><div class="cr-title-row"><h4>Electronic City</h4></div></div>
+            <a href="centers.html#electronic-city" class="cr-cta"><span class="cr-cta-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>View</a>
+          </div>
+          <div class="centre-row-card">
+            <div class="cr-thumb" style="--cc:var(--violet);--cbg:#EEE9FB;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+            <div class="cr-body"><div class="cr-title-row"><h4>Bannerghatta Road</h4></div></div>
+            <a href="centers.html#bannerghatta" class="cr-cta"><span class="cr-cta-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>View</a>
+          </div>
+          <div class="centre-row-card">
+            <div class="cr-thumb" style="--cc:var(--royal);--cbg:#E7F0FC;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+            <div class="cr-body"><div class="cr-title-row"><h4>Whitefield</h4></div></div>
+            <a href="centers.html#whitefield" class="cr-cta"><span class="cr-cta-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>View</a>
+          </div>
+          <div class="centre-row-card">
+            <div class="cr-thumb" style="--cc:var(--teal-bright);--cbg:#DFF5F0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+            <div class="cr-body"><div class="cr-title-row"><h4>Indiranagar</h4></div></div>
+            <a href="centers.html#indiranagar" class="cr-cta"><span class="cr-cta-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- nv:BEGIN contact-promise -->
+<section class="nv nv--promise nv--promise-contact nv-anchor" id="our-promise" aria-labelledby="our-promise-title">
+  <div class="nv-pr-deco" aria-hidden="true"><span class="nv-pr-swoosh nv-pr-swoosh--a"></span><span class="nv-pr-swoosh nv-pr-swoosh--b"></span><img class="nv-pr-eye" src="assets/brochure/hero-eye-photo.webp" alt="" loading="lazy"></div>
+  <div class="nv-wrap">
+    <div class="nv-promise">
+      <div class="nv-promise-art reveal">
+        <svg class="nv-pr-svg" viewBox="0 0 480 480" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>The patient at the centre, surrounded by expert surgeons, advanced technology, research and education, and community care</title>
+          <defs>
+            <radialGradient id="pr-bg"><stop offset="0" stop-color="#E3F5F6"/><stop offset=".7" stop-color="#EEF8FA"/><stop offset="1" stop-color="#EEF8FA" stop-opacity="0"/></radialGradient>
+            <filter id="pr-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0B2F4E" flood-opacity=".10"/></filter>
+          </defs>
+          <circle cx="240" cy="240" r="236" fill="url(#pr-bg)"/>
+          <circle cx="240" cy="240" r="212" fill="none" stroke="#9CCFD3" stroke-dasharray="2 6"/>
+          <circle cx="240" cy="240" r="166" fill="none" stroke="#D9B46A" stroke-width="1.6"/>
+          <circle cx="240" cy="240" r="120" fill="#fff" fill-opacity=".55" stroke="#CFE9EC"/>
+          <circle cx="240" cy="240" r="96" fill="none" stroke="#DDF0F2"/>
+          <g fill="#D9B46A"><circle cx="357.4" cy="122.6" r="4"/><circle cx="122.6" cy="122.6" r="4"/><circle cx="357.4" cy="357.4" r="4"/><circle cx="122.6" cy="357.4" r="4"/><circle cx="240" cy="148" r="4"/><circle cx="240" cy="332" r="4"/><circle cx="148" cy="240" r="4"/><circle cx="332" cy="240" r="4"/></g>
+          <path d="M240 148v-20M240 332v20M148 240h-20M332 240h20" stroke="#D9B46A" stroke-width="1.4"/>
+          <image href="assets/logo-mark.png" x="160" y="179" width="160" height="122" preserveAspectRatio="xMidYMid meet"/>
+          <g transform="translate(240 74)"><circle r="64" fill="#fff" stroke="#EADBB5" stroke-width="2" filter="url(#pr-sh)"/><circle r="56" fill="none" stroke="#F3EAD4"/><g transform="translate(-19 -44) scale(1.6)" fill="none" stroke="#0A6E8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6.5" r="3.5"/><path d="M5 21v-2.5A5.5 5.5 0 0 1 10.5 13h3a5.5 5.5 0 0 1 5.5 5.5V21"/><path d="M9 13.3v3.2a2 2 0 0 0 4 0M15.5 13.6v2.4"/><circle cx="15.5" cy="17.4" r="1.3"/></g><text y="14" text-anchor="middle" class="t">Expert</text><text y="31" text-anchor="middle" class="t">Surgeons</text></g><g transform="translate(74 240)"><circle r="64" fill="#fff" stroke="#EADBB5" stroke-width="2" filter="url(#pr-sh)"/><circle r="56" fill="none" stroke="#F3EAD4"/><g transform="translate(-19 -44) scale(1.6)" fill="none" stroke="#0A6E8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21h12M9 21a6 6 0 0 1-2-11"/><path d="M10.5 3.5l3 1.7-3.6 6.3-3-1.7z"/><path d="M12.3 7.4a5.5 5.5 0 0 1 3.4 8.6M9 18h7"/></g><text y="14" text-anchor="middle" class="t">Advanced</text><text y="31" text-anchor="middle" class="t">Technology</text></g><g transform="translate(406 240)"><circle r="64" fill="#fff" stroke="#EADBB5" stroke-width="2" filter="url(#pr-sh)"/><circle r="56" fill="none" stroke="#F3EAD4"/><g transform="translate(-19 -44) scale(1.6)" fill="none" stroke="#0A6E8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c3-1.3 6-1.3 9 .6 3-1.9 6-1.9 9-.6V19c-3-1.3-6-1.3-9 .6-3-1.9-6-1.9-9-.6z"/><path d="M12 6.1v13.5"/></g><text y="14" text-anchor="middle" class="t">Research &amp;</text><text y="31" text-anchor="middle" class="t">Education</text></g><g transform="translate(240 406)"><circle r="64" fill="#fff" stroke="#EADBB5" stroke-width="2" filter="url(#pr-sh)"/><circle r="56" fill="none" stroke="#F3EAD4"/><g transform="translate(-19 -44) scale(1.6)" fill="none" stroke="#0A6E8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2.6"/><circle cx="5.5" cy="8" r="2"/><circle cx="18.5" cy="8" r="2"/><path d="M2.5 17v-1a3 3 0 0 1 4.3-2.7M21.5 17v-1a3 3 0 0 0-4.3-2.7"/><path d="M12 20.5s-3.6-2.1-3.6-4.6A1.9 1.9 0 0 1 12 14.9a1.9 1.9 0 0 1 3.6 1c0 2.5-3.6 4.6-3.6 4.6z"/></g><text y="14" text-anchor="middle" class="t">Community</text><text y="31" text-anchor="middle" class="t">Care</text></g>
+        </svg>
+      </div>
+      <div class="nv-pr-copy reveal">
+        <p class="nv-label">Our Promise</p>
+        <h2 class="nv-h2" id="our-promise-title" data-hd="1"><span class="hd-s">The nucleus</span> <span class="hd-g">is always you.</span></h2>
+        <p class="nv-lead">Every machine we buy, every paper we publish, every surgeon we train and every child we screen serves one purpose: finding the very best for every person who walks through our doors. That is the old charm of an ethical hospital, carried into the future.</p>
+        <p class="nv-faith">&ldquo;Your faith shall heal you.&rdquo;</p>
+        <div class="nv-actions"><a href="appointment.html" class="btn btn-primary">Book an Appointment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="nv-contact">
+        <div><p class="nv-label">Visit</p><p>Bommasandra Industrial Area, Bengaluru &ndash; 560099<small>Main centre &middot; plus Electronic City, Bannerghatta Road, Whitefield and Indiranagar &middot; <a href="centers.html">All centres</a></small></p></div>
+        <div><p class="nv-label">Call</p><p>Appointments: <a href="tel:08066120000">080 6612 0000</a><small>Emergency: <a href="tel:08066220000">080 6622 0000</a></small></p></div>
+        <div><p class="nv-label">Online</p><p><a href="mailto:care@narayananetralaya.com">care@narayananetralaya.com</a><small><a href="appointment.html">Book an appointment online</a></small></p>
+          <!-- CONTENT ENTRY: the brochure's "Website" field has no value and the project has no verified public URL. Add it here, e.g. <small>Website: <a href="https://…">…</a></small> -->
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- nv:END contact-promise -->
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+  <a href="#" class="footer-totop" id="footerToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></a>
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <p>Committed to excellence in eye care, education and research for a brighter, healthier world.</p>
+      <ul class="footer-contact">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3"/></svg>080 6612 0000</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6M4 4h16v16H4z"/></svg>care@narayananetralaya.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="specialities.html">Specialities</a></li>
+        <li><a href="centers.html">Centres</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="laboratory.html">Laboratory</a></li>
+        <!-- nv:BEGIN foot --><li><a href="research.html">Research &amp; nVision</a></li><li><a href="vision-synapse.html">Vision Synapse</a></li><li><a href="advanced-care.html">Advanced Eye Care</a></li><li><a href="about.html#care-without-a-price-tag">Community</a></li><!-- nv:END foot -->
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Patient Information</h5>
+      <ul>
+        <li><a href="index.html#">Latest News</a></li>
+        <li><a href="patient-stories.html">Patient Stories</a></li><li><a href="index.html#">Insurance</a></li>
+        <li><a href="index.html#">International Patients</a></li>
+        <li><a href="index.html#">Careers</a></li>
+        <li><a href="contact.html">Get in Touch</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Our Locations</h5>
+      <ul class="footer-loc-col">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Bommasandra, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Electronic City, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Bannerghatta Road, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Whitefield, Bengaluru</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Indiranagar, Bengaluru</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Follow Us</h5>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l.5-3.5H13V7.3c0-1 .3-1.7 1.8-1.7H17V2.4C16.6 2.3 15.4 2 14 2c-2.9 0-4.9 1.8-4.9 5v2.5H6V13h3.1v9H13z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.1 0 4.9 2.7 4.9 6.2V21h-4v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 3V21h-4z"/></svg></a>
+      </div>
+      <p class="footer-tagline">Better Vision. Healthier Lives.</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Narayana Netralaya nVision Eye Hospitals &amp; Research Center.</span>
+    <div class="footer-bottom-links"><a href="coming-soon.html?page=privacy">Privacy Policy</a><a href="coming-soon.html?page=terms">Terms</a></div>
+  </div>
+</footer>
+
+<!-- ============================== MOBILE BOTTOM NAVIGATION ============================== -->
+<nav class="mobile-bar" id="mobileBar" aria-label="Mobile primary">
+  <a class="mb-item" data-bar="home" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</a>
+  <a class="mb-item" data-bar="eyecare" href="specialities.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>Eye Care</a>
+  <a class="mb-item" data-bar="doctors" href="doctors.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Doctor</a>
+  <a class="mb-item" data-bar="centres" href="centers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Centres</a>
+  <a class="mb-item primary" data-bar="appointment" href="appointment.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Appointment</a>
+</nav>
+
+<!-- ============================== FLOATING HELP (desktop/tablet) ============================== -->
+<div class="float-stack" id="floatStack">
+  <a class="float-btn" href="appointment.html" aria-label="Book an Appointment" title="Book an Appointment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></a>
+  <a class="float-btn" href="tel:08066120000" aria-label="Call Narayana Netralaya" title="Call Us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg></a>
+</div>
+
+<!-- ============================== CHATBOT WIDGET ============================== -->
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Netra Assistant chat" aria-hidden="true">
+  <div class="chat-head">
+    <div class="chat-avatar"><img src="assets/charboat.png" alt=""></div>
+    <div class="chat-head-text"><b>Netra Assistant</b><span>Online now</span></div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">Hi, I'm Netra Assistant 👋 Ask me about doctors, specialities, centres or appointments — or tap a quick option below.</div>
+  </div>
+  <div class="chat-quick" id="chatQuick">
+    <button data-reply="appointment">Book Appointment</button>
+    <button data-reply="doctor">Find a Doctor</button>
+    <button data-reply="centres">Find a Centre</button>
+    <button data-reply="support">Contact Support</button>
+  </div>
+  <form class="chat-input-row" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Type your question..." autocomplete="off" aria-label="Ask Netra Assistant">
+    <button type="submit" class="chat-send" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+</div>
+<button class="chatbot-btn" id="chatToggle" aria-label="Open chat assistant" aria-expanded="false">
+  <span class="chatbot-dot"></span>
+  <img class="ic-chat" src="assets/charboat.png" alt="">
+  <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</button>
+
+<script src="script.js"></script>
+<script src="nvision.js"></script>
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('contactStatus');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    status.classList.add('show');
+    form.reset();
+    status.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+})();
+</script>
+</body>
+</html>
